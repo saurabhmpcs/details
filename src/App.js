@@ -1,9 +1,7 @@
 import { useState } from "react";
-import {
-  BsFillArrowRightCircleFill,
-  BsFillArrowLeftCircleFill,
-} from "react-icons/bs";
 import "./App.css";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 function App() {
   const imageUrls = [
@@ -55,7 +53,7 @@ function App() {
 
           <div className="flex space-x-3 m-3 border-black border-2 p-2 w-fit">
             <img
-              onClick={() => {
+              onMouseOver={() => {
                 setSrc(
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIfFpAwWoDuWi11K0Yr3651zZAGzsENBu56tUgvOi4h3HsDpQoBlrEJRZNtXIuz-E8CEk"
                 );
@@ -65,7 +63,7 @@ function App() {
               alt=""
             />
             <img
-              onClick={() => {
+              onMouseOver={() => {
                 setSrc(
                   "https://www.perlove.net/wp-content/uploads/perlove-mobile-c-arm-machinr.png"
                 );
@@ -75,7 +73,7 @@ function App() {
               alt=""
             />
             <img
-              onClick={() => {
+              onMouseOver={() => {
                 setSrc(
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSACc1JWZYwgz4yLq2Oru5IDOtzwfb78AiJj7naS42vK8N4mGtiGrlKZ0VzF5hEebCRNn8"
                 );
@@ -85,7 +83,7 @@ function App() {
               alt=""
             />
             <img
-              onClick={() => {
+              onMouseOver={() => {
                 setSrc(
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWa3OUJQWsj7Ln7fPg02c9UA2TLOF9OT0X0w"
                 );
@@ -96,7 +94,6 @@ function App() {
             />
           </div>
         </div>
-
         <img
           className="m-4 rounded-2xl w-[590px] h-[490px] h- hover:scale-105 hover:border-black border-2"
           src={src}
